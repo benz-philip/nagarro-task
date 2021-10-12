@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Nagarro Test Cases" verbose="1">
+    <listeners>
+        <listener class-name="com.nagarro.reporing.TestListener"/>
+    </listeners>
+    <test name="Check elements on the home screen">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <parameter name="screenTitleValue" value="selendroid-test-app"/>
+                    <include name="firstTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check When Click On No No Button">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <include name="secondTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Preferred Car Is Selected">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <parameter name="webViewTitleValue" value="Web View Interaction"/>
+                    <parameter name="helloText" value="Hello, can you please tell me your name?"/>
+                    <parameter name="searchText" value="Hello"/>
+                    <parameter name="thisIsMyTextValue" value="This is my way of saying hello"/>
+                    <parameter name="carValue" value="mercedes"/>
+                    <parameter name="spinnerDefaultValue" value="Volvo"/>
+                    <include name="thirdTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check the defaut user Info ">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <include name="checkUserInfo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check When Click on Show Progress">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <include name="fifthTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Toast Message">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <parameter name="toastMessageValue" value="Hello selendroid toast!"/>
+                    <include name="sixthTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check When Click On Dismiss Popup">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <include name="seventhTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check When Click On Unhandled Exception Button">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <include name="eighthTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check When Fill Unhandled Exception Text Field">
+        <classes>
+            <class name="com.nagarro.mobile.tests.MobileTestCases">
+                <methods>
+                    <parameter name="textValue" value="test"/>
+                    <include name="ninthTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Nagarro Web Test Cases" verbose="1">
+    <listeners>
+        <listener class-name="com.nagarro.reporing.TestListener"/>
+    </listeners>
+    <test name="Check Droppable Case">
+        <classes>
+            <class name="com.nagarro.web.tests.WebTestCases">
+                <methods>
+                    <include name="checkDroppableCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Selectable Case">
+        <classes>
+            <class name="com.nagarro.web.tests.WebTestCases">
+                <methods>
+                    <include name="checkSelectableCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check Control Group Case">
+        <classes>
+            <class name="com.nagarro.web.tests.WebTestCases">
+                <methods>
+                    <include name="checkControlGroupCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

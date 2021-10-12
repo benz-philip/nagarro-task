@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Nagarro API Test Cases" verbose="1">
+    <listeners>
+        <listener class-name="com.nagarro.reporing.TestListener"/>
+    </listeners>
+    <test name="Check GET Request">
+        <classes>
+            <class name="com.nagarro.api.tests.APITestCases">
+                <methods>
+                    <parameter name="statusCode" value="200"/>
+                    <parameter name="userId" value="10"/>
+                    <parameter name="name" value="Byron"/>
+                    <include name="firstTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Check POST Request">
+        <classes>
+            <class name="com.nagarro.api.tests.APITestCases">
+                <methods>
+                    <parameter name="name" value="Bryant"/>
+                    <parameter name="job" value="BA"/>
+                    <parameter name="statusCode" value="201"/>
+                    <include name="secondTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
